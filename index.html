@@ -1,67 +1,365 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#8d2434"><link rel="manifest" href="manifest.webmanifest"><title>スペイン旅行コンパニオン</title><style>
-:root{--bg:#f6f2ec;--card:#fff;--ink:#1f1f22;--muted:#746d66;--brand:#8d2434;--brand2:#c84f45;--line:#eadfd5;--ok:#126349;--soft:#f5e6e7;--shadow:0 8px 24px #31101814} [data-theme=dark]{--bg:#111214;--card:#1c1e21;--ink:#f7f7f7;--muted:#b8b2aa;--brand:#ff9aa5;--brand2:#c84f45;--line:#34373b;--ok:#74dfb6;--soft:#352124;--shadow:0 8px 24px #0006}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif;padding-bottom:88px}button,a{font:inherit}.top{position:sticky;top:0;z-index:40;background:linear-gradient(135deg,#7d1f31,#d05748);color:#fff;padding:14px 16px 12px;box-shadow:0 4px 16px #0003}.toprow{display:flex;justify-content:space-between;align-items:center;gap:12px}.title{font-weight:900;font-size:20px}.subtitle{font-size:12px;opacity:.9;margin-top:3px}.iconbtn{border:0;background:#ffffff22;color:#fff;border-radius:12px;padding:9px 11px}.countdown{margin-top:10px;background:#ffffff18;border:1px solid #ffffff2b;border-radius:13px;padding:9px 11px;font-size:13px}.page{display:none;max-width:920px;margin:auto;padding:12px}.page.active{display:block}.hero,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:15px;margin:10px 0}.hero{background:linear-gradient(145deg,var(--card),var(--soft))}.hero h2,.card h2{margin:0 0 6px;color:var(--brand);font-size:20px}.small{font-size:12px;color:var(--muted)}.big{font-size:24px;font-weight:900}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.quick{border:1px solid var(--line);border-radius:15px;padding:13px;background:var(--card);text-decoration:none;color:var(--ink);display:block}.quick b{display:block;color:var(--brand);margin-bottom:4px}.quick:active,.btn:active,.ticket button:active{transform:scale(.98)}.quickmenu{margin-top:10px}.sectiontitle{font-size:13px;font-weight:900;color:var(--muted);margin:16px 3px 5px}.timeline{border-left:3px solid var(--brand);margin:14px 0 0 7px;padding-left:16px}.event{position:relative;padding:0 0 16px}.event:before{content:"";position:absolute;left:-23px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--brand);border:3px solid var(--card)}.time{font-weight:900;color:var(--brand);font-size:13px}.place{font-weight:850;margin:2px 0}.meta{font-size:13px;color:var(--muted);line-height:1.55}.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.btn{border:0;border-radius:10px;padding:9px 11px;font-weight:800;font-size:12px;text-decoration:none;background:var(--soft);color:var(--brand)}.btn.green{background:#dff2e9;color:#07563e}.btn.dark{background:#2a2c31;color:#fff}.ticketgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.ticket{border:1px solid var(--line);border-radius:15px;padding:11px;background:var(--card)}.ticket button{width:100%;border:0;border-radius:11px;background:#dff2e9;color:#07563e;padding:11px;font-weight:900;text-align:left}.badge{display:inline-block;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:800;background:#e8efe9;color:#15583f;margin:2px}.warn{background:#fff2c9;color:#674800;border:1px solid #e8d18a;padding:11px;border-radius:13px;font-size:13px;line-height:1.55}.info{background:#e8f3ee;color:#0d503c;border:1px solid #b9ddcd;padding:11px;border-radius:13px;font-size:13px;line-height:1.55}.tabs{display:flex;gap:7px;overflow:auto;margin:9px 0}.chip{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--brand);border-radius:999px;padding:8px 11px;font-weight:800;font-size:12px}.chip.active{background:var(--brand);color:#fff}.listrow{padding:11px 0;border-bottom:1px solid var(--line)}.listrow:last-child{border:0}.phrase{padding:10px 0;border-bottom:1px solid var(--line)}.phrase .jp{font-weight:900;color:var(--brand)}.phrase .en,.phrase .es{font-size:13px;margin-top:3px}.check{display:flex;align-items:flex-start;gap:9px;margin:10px 0}.check input{width:22px;height:22px}.bottom{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding:7px 4px calc(7px + env(safe-area-inset-bottom));box-shadow:0 -4px 18px #0002}.navbtn{border:0;background:transparent;color:var(--muted);font-size:11px;font-weight:800;padding:5px}.navbtn span{display:block;font-size:22px;line-height:1.1}.navbtn.active{color:var(--brand)}.modal{display:none;position:fixed;inset:0;background:#000e;z-index:100;flex-direction:column}.modal.show{display:flex}.modalbar{display:flex;justify-content:space-between;align-items:center;color:#fff;padding:12px}.modalcontent{overflow:auto;flex:1;text-align:center;padding:5px 10px 30px}.modalcontent img{max-width:100%;height:auto;background:#fff;margin:8px auto;border-radius:10px;display:block}.ticketstage{min-height:70vh;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:14px;padding:8px}.ticketstage img{max-height:76vh;object-fit:contain}.modaltools{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;padding:8px}.modaltools button{border:0;border-radius:999px;padding:10px 14px;font-weight:900}.scanmode{background:#fff!important}.scanmode .modalbar{background:#fff;color:#111}.scanmode .modalcontent{background:#fff}.scanmode .ticketstage{min-height:82vh}.scanmode .ticketstage img{max-height:86vh}.category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}.close{border:0;border-radius:999px;padding:9px 13px;font-weight:900}.search{width:100%;padding:12px;border:1px solid var(--line);border-radius:13px;background:var(--card);color:var(--ink)}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:8px 5px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.toast{position:fixed;left:50%;bottom:95px;transform:translateX(-50%);background:#111;color:#fff;border-radius:999px;padding:9px 14px;opacity:0;transition:.2s;z-index:120}.toast.show{opacity:1}@media(max-width:520px){.page{padding:9px}.grid2{grid-template-columns:1fr 1fr}.ticketgrid{grid-template-columns:1fr 1fr}.hero,.card{padding:13px}}
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#80202b"><title>スペイン旅行アプリ FINAL 2026-07-18</title><style>
+:root{--bg:#f5f0e9;--card:#fff;--ink:#222;--red:#922d38;--line:#e6dbcf;--muted:#6d665e;--green:#11664d}
+[data-theme=dark]{--bg:#151515;--card:#222;--ink:#f4f4f4;--red:#ff9da5;--line:#3a3a3a;--muted:#bdb5ab;--green:#7de2bb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Yu Gothic",sans-serif}
+header{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,#80202b,#c54b42);color:#fff;padding:16px;box-shadow:0 2px 12px #0004}.head{display:flex;justify-content:space-between;align-items:center}h1{font-size:21px;margin:0}header p{font-size:12px;margin:4px 0 0}.theme{border:0;border-radius:10px;background:#ffffff25;color:#fff;padding:8px 10px}
+nav{position:sticky;top:72px;z-index:40;display:flex;gap:7px;overflow:auto;background:var(--card);padding:9px 11px;border-bottom:1px solid var(--line)}nav a{white-space:nowrap;text-decoration:none;color:var(--red);border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:12px}
+main{max-width:900px;margin:auto;padding:11px}.panel,.day{background:var(--card);border-radius:16px;padding:15px;margin:11px 0;box-shadow:0 3px 13px #0001}.panel h2,.day h2{font-size:20px;color:var(--red);margin:0 0 4px}.sub{font-size:12px;color:var(--muted);margin-bottom:10px}
+.ticketgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tcard{border:1px solid var(--line);border-radius:12px;padding:10px}.ticketbtn{width:100%;border:0;border-radius:10px;background:#dff2ea;color:#07583f;padding:11px 8px;font-weight:800;text-align:left}.ticketbtn.pending{background:#fff0c9;color:#694900}.small{font-size:12px;margin-top:7px}.muted{font-size:11px;color:var(--muted);margin-top:2px}
+.item{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:12px 0;border-top:1px solid var(--line)}.time{font-weight:800;color:var(--red);font-size:13px}.place{font-weight:800;font-size:15px}.meta,.note{font-size:13px;color:var(--muted);line-height:1.5;margin-top:3px}.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.btn{border:0;border-radius:9px;padding:8px 10px;font-size:12px;font-weight:700;text-decoration:none;background:#f1e3db;color:#7a2330}.btn.ticket{background:#dff2ea;color:#07583f}.btn.copy{background:#ececec;color:#333}
+.check{display:flex;gap:8px;align-items:center;margin:8px 0}.check input{width:21px;height:21px}
+.status{background:#e5f4ed;border:1px solid #b9dfcf;border-radius:11px;padding:11px;line-height:1.6}.warn{background:#fff2ca;border:1px solid #e8d28c;border-radius:11px;padding:11px;line-height:1.6;margin-top:9px}
+.modal{display:none;position:fixed;inset:0;background:#000d;z-index:100;flex-direction:column}.modal.show{display:flex}.modalbar{display:flex;justify-content:space-between;align-items:center;color:#fff;padding:10px 12px}.modalcontent{overflow:auto;flex:1;text-align:center;padding:5px 10px 30px}.modalcontent img{max-width:100%;height:auto;background:#fff;margin:8px 0;border-radius:8px}.close{border:0;background:#fff;color:#111;border-radius:999px;padding:8px 12px;font-weight:800}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#111;color:#fff;padding:9px 13px;border-radius:999px;opacity:0;transition:.2s;z-index:120}.toast.show{opacity:1}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:8px 5px;text-align:left;vertical-align:top}
+@media(max-width:480px){nav{top:70px}.ticketgrid{grid-template-columns:1fr 1fr}.item{grid-template-columns:65px 1fr}.panel,.day{padding:13px;margin:8px 0}}
+
+.homehero{background:linear-gradient(135deg,#fff8ef,#fff);border:2px solid #ead6c2}.herohead{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.todaybadge{font-size:12px;font-weight:800;background:#f3e1d6;color:#7a2330;border-radius:999px;padding:6px 9px}.nextcard{margin-top:12px;border:1px solid var(--line);border-radius:14px;padding:13px;background:var(--card)}.nextname{font-size:22px;font-weight:900;line-height:1.3}.nextmeta{font-size:13px;color:var(--muted);margin-top:4px}.bigactions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:11px}.bigbtn{border:0;border-radius:12px;padding:13px 10px;font-size:14px;font-weight:900;text-decoration:none;text-align:center;background:#f1e3db;color:#7a2330}.bigbtn.primary{grid-column:1/-1;background:#922d38;color:#fff}.bigbtn.taxi{background:#151515;color:#fff}.todaytickets{margin-top:12px}.todayticket{border:1px solid var(--line);border-radius:12px;padding:11px;margin-top:8px;background:var(--card)}.todayticket b{display:block;font-size:15px}.empty{font-size:13px;color:var(--muted);padding:8px 0}.taxi-modal{background:#fff;color:#111}.taxi-card{margin:auto;max-width:700px;padding:28px 18px;text-align:center}.taxi-kicker{font-size:18px;font-weight:800;color:#7a2330}.taxi-name{font-size:clamp(34px,9vw,72px);font-weight:1000;line-height:1.05;margin:18px 0}.taxi-address{font-size:clamp(20px,5vw,36px);font-weight:800;line-height:1.25}.taxi-spanish{margin-top:26px;padding:18px;border-radius:14px;background:#f2eee8;font-size:clamp(22px,5vw,38px);font-weight:900}.taxi-help{margin-top:18px;font-size:20px;font-weight:800}.modal.qrmode{background:#fff}.modal.qrmode .modalbar{background:#111}.modal.qrmode .modalcontent{display:flex;align-items:center;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px}.qrslide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;scroll-snap-align:center;background:#fff}.qrslide img{max-width:100%;max-height:92%;object-fit:contain;margin:0;border-radius:0}.bright{border:0;background:#ffe66d;color:#111;border-radius:999px;padding:8px 12px;font-weight:900}.taxishow{background:#111!important;color:#fff!important}
+.modal.boarding{background:#fff;color:#111}.modal.boarding .modalbar{background:#050505}.modal.boarding .modalcontent{padding:0;overflow:hidden;display:block}.boarding-stage{height:100%;display:flex;flex-direction:column;background:#fff}.boarding-image-wrap{flex:1;min-height:0;overflow:auto;display:flex;align-items:center;justify-content:center;background:#fff;touch-action:pan-x pan-y}.boarding-image{max-width:none;max-height:none;width:auto;height:auto;object-fit:contain;transform-origin:center center;transition:transform .15s ease}.boarding-controls{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:7px;padding:8px;background:#111}.boarding-controls button{border:0;border-radius:10px;padding:11px 6px;font-size:13px;font-weight:900;background:#fff;color:#111}.boarding-controls .primary{background:#ffe66d}.boarding-pager{text-align:center;font-size:13px;font-weight:900;padding:7px;background:#fff;border-top:1px solid #ddd}.boarding-tip{text-align:center;font-size:12px;padding:6px 8px;background:#fffbe6}.modal.boarding.hide-ui .modalbar,.modal.boarding.hide-ui .boarding-controls,.modal.boarding.hide-ui .boarding-pager,.modal.boarding.hide-ui .boarding-tip{display:none}.modal.boarding.hide-ui .boarding-image-wrap{height:100vh}.flightbtn{background:#111!important;color:#fff!important}
+@media(max-width:480px){.bigactions{grid-template-columns:1fr}.bigbtn.primary{grid-column:auto}.taxi-card{padding-top:18px}}
+
+.finalbadge{display:inline-block;margin-left:7px;padding:4px 9px;border-radius:999px;background:#ffe34f;color:#332600;font-size:12px;font-weight:900}
+.guidegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.guidecard{background:#fff;border:1px solid #eadfd5;border-radius:16px;padding:14px;box-shadow:0 5px 16px #0000000d}
+.guidecard h3{margin:0 0 8px;color:#80202b}
+.phrasebox{background:#fff8dd;border-left:5px solid #e3a400;padding:11px;border-radius:10px;margin:8px 0;line-height:1.55}
+@media(max-width:560px){.guidegrid{grid-template-columns:1fr}}
 </style></head><body>
-<header class="top"><div class="toprow"><div><div class="title">🇪🇸 スペイン旅行コンパニオン</div><div class="subtitle">2026/7/20〜7/29｜松野ご夫妻　<span style="display:inline-block;background:#fff;color:#8d2434;border-radius:999px;padding:2px 7px;font-weight:900">更新版 v6</span></div></div><button class="iconbtn" id="theme">◐</button></div><div class="countdown" id="countdown">旅行情報を準備中…</div></header>
-<main>
-<section class="page active" id="home"><div class="hero"><div class="small" id="todayLabel">今日</div><div class="big" id="todayTitle">旅行までの準備</div><div class="small" id="todaySub">当日はその日の予定を自動表示します</div><div class="actions"><button class="btn green" onclick="go('itinerary')">今日の旅程</button><button class="btn" onclick="go('tickets')">今日のチケット</button><button class="btn dark" onclick="go('more');setMore('emergency')">🚨 緊急</button></div></div>
-<div class="grid2"><a class="quick" href="javascript:void(0)" onclick="go('itinerary')"><b>📅 日別旅程</b><span class="small">7/20〜7/29</span></a><a class="quick" href="javascript:void(0)" onclick="go('tickets')"><b>🎫 チケット</b><span class="small">QR・搭乗券を大きく表示</span></a><a class="quick" href="javascript:void(0)" onclick="go('maps')"><b>🗺 地図</b><span class="small">ホテル・駅・空港</span></a><a class="quick" href="javascript:void(0)" onclick="openTool('airports')"><b>✈️ 空港・ラウンジ</b><span class="small">DXB乗継・MAD出発</span></a></div>
-<div class="sectiontitle">すぐ使う</div><div class="category-grid"><a class="quick" href="javascript:void(0)" onclick="openTool('hotels')"><b>🏨 ホテル</b><span class="small">住所・電話・アップグレード</span></a><a class="quick" href="javascript:void(0)" onclick="openTool('transport')"><b>🚖 交通・タクシー</b><span class="small">都市別の乗り方</span></a><a class="quick" href="javascript:void(0)" onclick="openTool('phrases')"><b>🗣 会話集</b><span class="small">英語・スペイン語</span></a><a class="quick" href="javascript:void(0)" onclick="openTool('emergency')"><b>🚨 緊急</b><span class="small">112・大使館</span></a></div>
-<div class="card"><h2>次の重要予定</h2><div id="nextEvent" class="info">7/20 14:30 三軒茶屋を出発</div></div>
-<div class="card"><h2>出発前チェック</h2><label class="check"><input data-save="passport" type="checkbox">パスポート2名分</label><label class="check"><input data-save="cards" type="checkbox">クレジットカード・現金</label><label class="check"><input data-save="esim" type="checkbox">eSIM・モバイル通信</label><label class="check"><input data-save="meds" type="checkbox">常備薬・充電器・変換プラグ</label></div></section>
-<section class="page" id="itinerary"><div class="tabs" id="dayTabs"></div><div id="dayContent"></div></section>
-<section class="page" id="tickets"><div class="card"><h2>🎫 チケット一覧</h2><div class="small">タップするとオフライン画像を直接表示</div><div class="ticketgrid" id="ticketGrid"></div></div></section>
-<section class="page" id="maps"><div class="card"><h2>🗺 目的地マップ</h2><input class="search" id="mapSearch" placeholder="ホテル・レストラン・観光地を検索"><div id="mapList"></div></div><div class="card"><h2>オフライン地図の準備</h2><div class="info">出発前にGoogle Mapsで「バルセロナ」「マドリード」「トレド」をオフライン保存。リンクはオンライン時に開きます。</div></div></section>
-<section class="page" id="more"><div class="tabs" id="moreTabs"><button class="chip active" onclick="setMore('airports',this)">✈️ 空港</button><button class="chip" onclick="setMore('hotels',this)">🏨 ホテル</button><button class="chip" onclick="setMore('transport',this)">🚇 交通</button><button class="chip" onclick="setMore('food',this)">🍽 食事</button><button class="chip" onclick="setMore('money',this)">💶 お金</button><button class="chip" onclick="setMore('phrases',this)">🗣 会話</button><button class="chip" onclick="setMore('checklist',this)">🧳 持ち物</button><button class="chip" onclick="setMore('emergency',this)">🚨 緊急</button></div><div id="moreContent"></div></section>
-</main>
-<nav class="bottom"><button class="navbtn active" data-page="home" onclick="go('home',this)"><span>🏠</span>ホーム</button><button class="navbtn" data-page="itinerary" onclick="go('itinerary',this)"><span>📅</span>旅程</button><button class="navbtn" data-page="tickets" onclick="go('tickets',this)"><span>🎫</span>チケット</button><button class="navbtn" data-page="maps" onclick="go('maps',this)"><span>🗺</span>地図</button><button class="navbtn" data-page="more" onclick="go('more',this)"><span>•••</span>その他</button></nav>
-<div class="modal" id="modal"><div class="modalbar"><b id="mtitle">チケット</b><button class="close" onclick="closeGallery()">閉じる</button></div><div class="modalcontent"><div class="modaltools"><button onclick="prevTicket()">◀ 前</button><button onclick="toggleScanMode()">🔆 スキャン表示</button><button onclick="toggleFullscreen()">⛶ 全画面</button><button onclick="nextTicket()">次 ▶</button></div><div id="mcontent"></div><div class="small" id="ticketCounter" style="color:#fff;padding:8px"></div></div></div><div class="toast" id="toast">コピーしました</div>
-<script>
-const tripStart=new Date('2026-07-20T14:30:00+09:00');
-const days=[
-{date:'7/20',title:'三軒茶屋 → 成田 → ドバイ',sub:'成田山散策なし。うなぎを食べて空港へ',events:[['14:30','三軒茶屋 出発','首都高・東関東道。渋滞を見込み余裕を確保','https://www.google.com/maps/dir/?api=1&origin=Sangenjaya&destination=Kawatoyo+Honten+Narita'],['16:15頃','川豊本店 到着','うなぎの食事のみ。混雑時は待ち時間を確認','https://www.google.com/maps/search/?api=1&query=Kawatoyo+Honten+Narita'],['16:30〜17:45','うなぎで夕食','食後はそのまま空港へ'],['18:15〜19:00','成田空港P2南棟','予約297898／BMW白／駐車位置を撮影','https://www.google.com/maps/search/?api=1&query=Narita+Airport+P2'],['22:30','EK319 成田発','予約FBAB8F。ドバイ乗継','ticket:emirates']]},
-{date:'7/21',title:'ドバイ乗継 → バルセロナ',sub:'到着後ホテルへ',events:[['乗継','DXB Terminal 3','Connections表示→保安検査→出発ゲート。ゲートまで30〜45分確保'],['到着後','Renaissance Barcelona','Pau Claris 122／確認80761195／+34 932 72 38 10','https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel'],['20:30頃','El Nacional','体調を見て夕食','https://www.google.com/maps/search/?api=1&query=El+Nacional+Barcelona']]},
-{date:'7/22',title:'ガウディ名所の日',sub:'カサ・バトリョ／サグラダ・ファミリア／Botafumeiro',events:[['10:00','カサ・バトリョ','予約102421268／2名','ticket:batllo'],['16:15','サグラダ・ファミリア','生誕の塔16:30／予約101272579','ticket:sagrada'],['20:00','Botafumeiro','2名・予約確定・デポジット100€','https://www.google.com/maps/search/?api=1&query=Botafumeiro+Barcelona']]},
-{date:'7/23',title:'グエル公園とカサ・ミラ',sub:'夜はRíasKRU',events:[['10:30','グエル公園','Booking 8652195／入場は予約時刻後30分まで／再入場不可','ticket:guell'],['15:00','カサ・ミラ','予約102425702','ticket:mila'],['19:30','RíasKRU','予約済み','https://www.google.com/maps/search/?api=1&query=RiasKRU+Barcelona']]},
-{date:'7/24',title:'モンセラット',sub:'FGC→R5→Cremallera→黒いマリア',events:[['朝','ホテル→Plaça Espanya','タクシー。駅でCremallera経由の往復券を購入'],['10:36目安','R5 出発','Barcelona-Plaça Espanya→Monistrol de Montserrat'],['11:40頃','Monistrol 到着','Cremalleraに乗換'],['13:45','黒いマリア','予約101845669','ticket:montserrat'],['20:00','Bardeni','予約済み','https://www.google.com/maps/search/?api=1&query=Bardeni+Barcelona']]},
-{date:'7/25',title:'バルセロナ → マドリード',sub:'iryoで移動',events:[['11:18','iryo 出発','1号車4A・4B／OLXF6I','ticket:iryo'],['到着後','The Palace Madrid','確認80754846／+34 913 60 80 00','https://www.google.com/maps/search/?api=1&query=The+Palace+Madrid'],['20:30','Lobito de Mar','未予約','https://www.google.com/maps/search/?api=1&query=Lobito+de+Mar+Madrid']]},
-{date:'7/26',title:'マドリード王宮とプラド',sub:'夜はSADDLE候補',events:[['10:15','マドリード王宮','R116549946','ticket:palace'],['14:00','プラド美術館','M312847F','ticket:prado'],['20:30','SADDLE','未予約','https://www.google.com/maps/search/?api=1&query=SADDLE+Madrid']]},
-{date:'7/27',title:'トレド日帰り',sub:'大聖堂・800周年展・La Orza',events:[['朝','Renfeでトレドへ','往復予約G6VPSM','ticket:renfe'],['10:00','トレド大聖堂','予約101851118','ticket:toledo'],['11:30','800周年展','注文5683／2名／24€','ticket:anniv'],['13:30','La Orza','予約済み','https://www.google.com/maps/search/?api=1&query=La+Orza+Toledo']]},
-{date:'7/28',title:'マドリード → ドバイ',sub:'ホテル軽食後、空港へ',events:[['朝','ホテルで軽食','前日に買ったサンドイッチ・果物'],['11:15','ホテル出発','タクシーでMAD T4へ。渋滞考慮'],['15:25','EK142 マドリード発','T4チェックイン→必要に応じT4Sへ','ticket:emirates']]},
-{date:'7/29',title:'成田到着',sub:'P2南棟で車を受取',events:[['17:35','成田到着','入国・荷物受取→P2南棟→帰宅','ticket:emirates']]}
-];
-const tickets=[
-{id:'batllo',name:'🎫 カサ・バトリョ',meta:'7/22 10:00／予約102421268',imgs:['assets/casabatllo_katsuyuki.png','assets/casabatllo_yuriko.png']},{id:'sagrada',name:'🎫 サグラダ・ファミリア',meta:'7/22 16:15／予約101272579',imgs:['assets/sagrada_01.png','assets/sagrada_02.png']},{id:'mila',name:'🎫 カサ・ミラ',meta:'7/23 15:00／予約102425702',imgs:['assets/tickets_01.png','assets/tickets_02.png']},{id:'guell',name:'🎫 グエル公園',meta:'7/23 10:30／8652195',imgs:['assets/guell_01.png','assets/guell_02.png']},{id:'montserrat',name:'🎫 モンセラット',meta:'7/24 13:45／101845669',imgs:['assets/tickets_17.png','assets/tickets_18.png','assets/tickets_19.png','assets/tickets_20.png']},{id:'iryo',name:'🚄 iryo',meta:'7/25 11:18／4A・4B',imgs:['assets/tickets_03.png','assets/tickets_04.png']},{id:'renfe',name:'🚄 Renfe',meta:'7/27 往復／G6VPSM',imgs:['assets/tickets_05.png','assets/tickets_06.png','assets/tickets_07.png','assets/tickets_08.png','assets/tickets_09.png']},{id:'palace',name:'🎫 マドリード王宮',meta:'7/26 10:15／R116549946',imgs:['assets/tickets_15.png','assets/tickets_16.png']},{id:'prado',name:'🎫 プラド美術館',meta:'7/26 14:00／M312847F',imgs:['assets/tickets_13.png','assets/tickets_14.png']},{id:'toledo',name:'🎫 トレド大聖堂',meta:'7/27 10:00／101851118',imgs:['assets/tickets_10.png','assets/tickets_11.png']},{id:'anniv',name:'🎫 800周年展',meta:'7/27 11:30／注文5683',imgs:['assets/tickets_12.png']},{id:'emirates',name:'✈️ エミレーツ',meta:'往復／FBAB8F',imgs:['assets/tickets_21.png','assets/tickets_22.png','assets/tickets_23.png','assets/tickets_24.png','assets/tickets_25.png','assets/tickets_26.png']}];
-const places=[['Renaissance Barcelona Hotel','ホテル','https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel'],['The Palace Madrid','ホテル','https://www.google.com/maps/search/?api=1&query=The+Palace+Madrid'],['川豊本店','食事','https://www.google.com/maps/search/?api=1&query=Kawatoyo+Honten+Narita'],['Botafumeiro','食事','https://www.google.com/maps/search/?api=1&query=Botafumeiro+Barcelona'],['RíasKRU','食事','https://www.google.com/maps/search/?api=1&query=RiasKRU+Barcelona'],['Bardeni','食事','https://www.google.com/maps/search/?api=1&query=Bardeni+Barcelona'],['La Orza','食事','https://www.google.com/maps/search/?api=1&query=La+Orza+Toledo'],['カサ・バトリョ','観光','https://www.google.com/maps/search/?api=1&query=Casa+Batllo'],['サグラダ・ファミリア','観光','https://www.google.com/maps/search/?api=1&query=Sagrada+Familia'],['グエル公園','観光','https://www.google.com/maps/search/?api=1&query=Park+Guell'],['モンセラット','観光','https://www.google.com/maps/search/?api=1&query=Montserrat+Monastery'],['マドリード王宮','観光','https://www.google.com/maps/search/?api=1&query=Royal+Palace+Madrid'],['プラド美術館','観光','https://www.google.com/maps/search/?api=1&query=Prado+Museum'],['トレド大聖堂','観光','https://www.google.com/maps/search/?api=1&query=Toledo+Cathedral'],['成田空港P2','空港','https://www.google.com/maps/search/?api=1&query=Narita+Airport+P2'],['Madrid Airport T4','空港','https://www.google.com/maps/search/?api=1&query=Madrid+Airport+Terminal+4']];
-function go(id,btn){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.navbtn').forEach(x=>x.classList.toggle('active',x.dataset.page===id));scrollTo(0,0)}
-function openTool(type){go('more');setMore(type);document.querySelectorAll('#moreTabs .chip').forEach(b=>{if((b.getAttribute('onclick')||'').includes("'"+type+"'"))b.classList.add('active');else b.classList.remove('active')})}
-function renderDays(){dayTabs.innerHTML=days.map((d,i)=>`<button class="chip ${i===0?'active':''}" onclick="showDay(${i},this)">${d.date}</button>`).join('');showDay(0)}
-function showDay(i,btn){document.querySelectorAll('#dayTabs .chip').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');else dayTabs.children[i].classList.add('active');let d=days[i];dayContent.innerHTML=`<div class="hero"><h2>${d.date}｜${d.title}</h2><div class="small">${d.sub}</div><div class="timeline">${d.events.map(e=>`<div class="event"><div class="time">${e[0]}</div><div class="place">${e[1]}</div><div class="meta">${e[2]||''}</div>${e[3]?action(e[3],e[1]):''}</div>`).join('')}</div><label class="check"><input data-save="day${i}" type="checkbox">この日の予約・持ち物を確認済み</label></div>`;bindChecks()}
-function action(x,label){if(x.startsWith('ticket:'))return `<div class="actions"><button class="btn green" onclick="openTicket('${x.split(':')[1]}')">🎫 チケット表示</button></div>`;return `<div class="actions"><a class="btn" href="${x}" target="_blank">📍 地図</a><button class="btn" onclick="cp('${x}')">URLコピー</button></div>`}
-function renderTickets(){ticketGrid.innerHTML=tickets.map(t=>`<div class="ticket"><button onclick="openTicket('${t.id}')">${t.name}</button><div class="small" style="margin-top:7px">${t.meta}</div></div>`).join('')}
-let galleryImgs=[],galleryTitle='',galleryIndex=0,wakeLock=null;
-function openTicket(id){let t=tickets.find(x=>x.id===id);openGallery(t.imgs,t.name)}
-function openGallery(imgs,title){galleryImgs=imgs;galleryTitle=title;galleryIndex=0;mtitle.textContent=title;renderGallery();modal.classList.add('show');document.body.style.overflow='hidden';requestWakeLock()}
-function renderGallery(){if(!galleryImgs.length)return;mcontent.innerHTML=`<div class="ticketstage"><img src="${galleryImgs[galleryIndex]}" alt="${galleryTitle}"></div>`;ticketCounter.textContent=`${galleryIndex+1} / ${galleryImgs.length}　左右ボタンで切替`}
-function prevTicket(){galleryIndex=(galleryIndex-1+galleryImgs.length)%galleryImgs.length;renderGallery()}
-function nextTicket(){galleryIndex=(galleryIndex+1)%galleryImgs.length;renderGallery()}
-function toggleScanMode(){modal.classList.toggle('scanmode')}
-async function toggleFullscreen(){try{if(!document.fullscreenElement)await modal.requestFullscreen();else await document.exitFullscreen()}catch(e){}}
-async function requestWakeLock(){try{if('wakeLock' in navigator)wakeLock=await navigator.wakeLock.request('screen')}catch(e){}}
-function closeGallery(){modal.classList.remove('show','scanmode');document.body.style.overflow='';if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});if(wakeLock){wakeLock.release().catch(()=>{});wakeLock=null}}
-function renderMaps(q=''){mapList.innerHTML=places.filter(p=>p[0].toLowerCase().includes(q.toLowerCase())||p[1].includes(q)).map(p=>`<div class="listrow"><b>${p[0]}</b><div class="small">${p[1]}</div><div class="actions"><a class="btn" href="${p[2]}" target="_blank">地図を開く</a><button class="btn" onclick="cp('${p[2]}')">コピー</button></div></div>`).join('')}
-function setMore(type,btn){document.querySelectorAll('#moreTabs .chip').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');const html={
-airports:`<div class="card"><h2>✈️ 空港・ラウンジ</h2><h3>ドバイ乗継（DXB）</h3><div class="info">降機後は「Connections」表示に従う → 乗継保安検査 → 出発ゲート確認。A/B/Cコンコース移動を含め、ラウンジからゲートまで30〜45分確保。</div><table><tr><th>候補</th><th>ポイント</th></tr><tr><td>Emirates Lounge</td><td>T3 A/B/C。対象運賃・ステータスまたは有料利用。食事・シャワー</td></tr><tr><td>Ahlan Lounge</td><td>A/B/C各所。ゲートと同じコンコースを選択</td></tr><tr><td>Plaza Premium</td><td>T3 A Gates。食事・シャワー・休憩</td></tr></table><h3>MAD出発</h3><div class="info">T4でチェックイン → 保安検査 → 非シェンゲン便はAPMでT4Sへ → 出国審査 → Sゲート。広いため早めに移動。</div><table><tr><th>ラウンジ</th><th>使い分け</th></tr><tr><td>Neptuno</td><td>T4S・非シェンゲン向け。第一候補</td></tr><tr><td>Gran Vía</td><td>T4S、Sゲート付近の場合に便利</td></tr><tr><td>Plaza Mayor</td><td>T4シェンゲン側。ドバイ便には通常不向き</td></tr></table></div>`,
-hotels:`<div class="card"><h2>🏨 ホテル</h2><div class="listrow"><b>Renaissance Barcelona Hotel</b><div class="meta">Pau Claris 122<br>確認80761195<br><a href="tel:+34932723810">+34 932 72 38 10</a><br>ツイン希望登録済み。チェックイン時にMarriottアップグレードを相談。<div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel">地図</a><button class="btn" onclick="cp('Pau Claris 122, Barcelona')">住所コピー</button></div></div></div><div class="listrow"><b>The Palace Madrid</b><div class="meta">Plaza de las Cortes 7<br>確認80754846<br><a href="tel:+34913608000">+34 913 60 80 00</a></div></div><div class="listrow"><b>アップグレード依頼</b><div class="meta">If possible, could you offer us a complimentary room upgrade?<br>Si es posible, ¿podrían ofrecernos una mejora de habitación sin coste?</div></div><div class="warn">毎回確認：朝食条件／Wi‑Fi／レイトチェックアウト／荷物預かり／タクシー手配</div></div>`,
-transport:`<div class="card"><h2>🚇 交通</h2><div class="listrow"><b>Barcelona Metro</b><div class="meta">改札でタッチまたは券を挿入。スリ対策でバッグは前へ。</div></div><div class="listrow"><b>Montserrat</b><div class="meta">Plaça EspanyaでR5。AeriではなくCremallera経由を購入。</div></div><div class="listrow"><b>iryo / Renfe</b><div class="meta">駅には30分前を目安。荷物検査・ホーム案内を確認。</div></div><div class="listrow"><b>バルセロナ空港 → 市内ホテル</b><div class="meta">黒×黄色の正規タクシー乗場を利用。メーター制＋空港関連加算。カード利用可。ホテル名と住所を画面で提示。</div></div><div class="listrow"><b>マドリード市内 → MAD空港</b><div class="meta">「Madrid Airport Terminal 4, Emirates」と伝える。市内中心部と空港間は定額運賃の対象になることが多い。ホテル手配または正規乗場を優先。</div></div><div class="listrow"><b>Cabify / Uber / FreeNow</b><div class="meta">料金比較と目的地指定に便利。乗車場所が通常タクシー乗場と異なる場合あり。</div></div></div>`,
-food:`<div class="card"><h2>🍽 レストラン</h2><table><tr><th>日付</th><th>店</th><th>状態</th></tr><tr><td>7/22</td><td>Botafumeiro 20:00</td><td>確定</td></tr><tr><td>7/23</td><td>RíasKRU 19:30</td><td>確定</td></tr><tr><td>7/24</td><td>Bardeni 20:00</td><td>確定</td></tr><tr><td>7/25</td><td>Lobito de Mar 20:30</td><td>未予約</td></tr><tr><td>7/26</td><td>SADDLE 20:30</td><td>未予約</td></tr><tr><td>7/27</td><td>La Orza 13:30</td><td>確定</td></tr></table><div class="info">水・パンが有料の場合あり。会計は「La cuenta, por favor.」。チップは義務ではなく、良いサービスなら端数〜5〜10%程度。</div></div>`,
-money:`<div class="card"><h2>💶 お金・VAT</h2><div class="listrow"><b>カード決済</b><div class="meta">現地通貨EURを選択。日本円建て（DCC）は通常避ける。</div></div><div class="listrow"><b>ATM</b><div class="meta">銀行系ATMを優先。手数料表示を確認。</div></div><div class="listrow"><b>VAT還付</b><div class="meta">購入店で書類受領 → 空港で税関確認 → 還付手続き。商品・パスポート・搭乗券・レシートをすぐ出せるように。</div></div><div class="listrow"><b>チップ</b><div class="meta">原則任意。高級店や特に良いサービスで5〜10%目安。</div></div></div>`,
-phrases:`<div class="card"><h2>🗣 困ったとき辞典</h2>${[['予約しています','I have a reservation.','Tengo una reserva.'],['ツインルームを希望しています','I would like a twin room.','Quisiera una habitación con dos camas.'],['アップグレードできますか？','Is an upgrade available?','¿Hay posibilidad de una mejora de habitación?'],['レイトチェックアウトできますか？','Is late checkout available?','¿Es posible hacer el check-out más tarde?'],['荷物を預かってください','Could you keep our luggage?','¿Puede guardar nuestro equipaje?'],['おすすめは何ですか？','What do you recommend?','¿Qué recomienda?'],['お会計をお願いします','The bill, please.','La cuenta, por favor.'],['この住所までお願いします','Please take us to this address.','A esta dirección, por favor.'],['乗り継ぎはどこですか？','Where are flight connections?','¿Dónde están las conexiones?'],['ラウンジはどこですか？','Where is the lounge?','¿Dónde está la sala VIP?'],['財布をなくしました','I lost my wallet.','He perdido mi cartera.'],['日本大使館へ連絡したい','I need to contact the Japanese Embassy.','Necesito contactar con la Embajada de Japón.']].map(p=>`<div class="phrase"><div class="jp">${p[0]}</div><div class="en">EN: ${p[1]}</div><div class="es">ES: ${p[2]}</div></div>`).join('')}</div>`,
-checklist:`<div class="card"><h2>🧳 チェックリスト</h2><h3>出発前</h3>${['パスポート','航空券・予約番号','カード・現金','eSIM','充電器・変換プラグ','常備薬','サングラス・帽子'].map((x,i)=>`<label class="check"><input data-save="depart${i}" type="checkbox">${x}</label>`).join('')}<h3>毎朝ホテルを出る前</h3>${['パスポートまたはコピー','スマホ・モバイルバッテリー','水','当日のチケット','ホテルカード・住所'].map((x,i)=>`<label class="check"><input data-save="daily${i}" type="checkbox">${x}</label>`).join('')}<h3>帰国前</h3>${['VAT書類','全チケット・パスポート','ホテル忘れ物確認','空港移動時間確認'].map((x,i)=>`<label class="check"><input data-save="return${i}" type="checkbox">${x}</label>`).join('')}</div>`,
-emergency:`<div class="card"><h2>🚨 緊急</h2><div class="grid2"><a class="quick" href="tel:112"><b>112</b><span class="small">警察・救急・消防</span></a><a class="quick" href="tel:+34915907600"><b>日本大使館</b><span class="small">+34 91 590 7600</span></a></div><div class="listrow"><b>パスポート紛失</b><div class="meta">警察で紛失届 → 日本大使館・総領事館へ連絡。パスポート写真・コピーを別保存。</div></div><div class="listrow"><b>カード紛失</b><div class="meta">カード会社アプリまたは裏面番号で即時停止。</div></div><div class="listrow"><b>スマホ紛失</b><div class="meta">ホテル名、航空券予約FBAB8F、家族連絡先を紙にも控える。</div></div><div class="warn">医療・事故・盗難はまず112。生命に関わる場合は翻訳より先に電話。</div></div>`};moreContent.innerHTML=html[type];bindChecks()}
-function bindChecks(){document.querySelectorAll('[data-save]').forEach(x=>{x.checked=localStorage.getItem('chk_'+x.dataset.save)==='1';x.onchange=()=>localStorage.setItem('chk_'+x.dataset.save,x.checked?'1':'0')})}
-function cp(x){navigator.clipboard.writeText(x).then(()=>toastMsg('コピーしました')).catch(()=>prompt('コピーしてください',x))}function toastMsg(x){toast.textContent=x;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1300)}
-function updateCountdown(){let now=new Date(),diff=tripStart-now;if(diff>0){let d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000);countdown.textContent=`出発まで ${d}日 ${h}時間｜7/20 14:30 三軒茶屋出発`}else{countdown.textContent='旅行期間中｜今日の旅程とチケットを確認';let jst=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Tokyo'}));let idx=Math.floor((Date.UTC(jst.getFullYear(),jst.getMonth(),jst.getDate())-Date.UTC(2026,6,20))/86400000);if(idx>=0&&idx<days.length){todayLabel.textContent=days[idx].date;todayTitle.textContent=days[idx].title;todaySub.textContent=days[idx].sub;nextEvent.textContent=`${days[idx].events[0][0]} ${days[idx].events[0][1]}`}}}
-const root=document.documentElement;root.dataset.theme=localStorage.getItem('theme')||'light';theme.onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('theme',root.dataset.theme)};mapSearch.oninput=e=>renderMaps(e.target.value);renderDays();renderTickets();renderMaps();setMore('airports');bindChecks();updateCountdown();setInterval(updateCountdown,60000);if('serviceWorker'in navigator){navigator.serviceWorker.register('./sw.js?v=6').then(r=>{r.update();navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!sessionStorage.getItem('v6reloaded')){sessionStorage.setItem('v6reloaded','1');location.reload()}})}).catch(()=>{})}
-</script>
-</body></html>
+<header><div class="head"><div><h1>🇪🇸 スペイン旅行アプリ <span class="finalbadge">FINAL実反映版</span></h1><p>2026/7/20〜7/29｜完成版 Ver.2</p></div><button id="theme" class="theme">◐</button></div></header>
+<nav><a href="#home">今日</a><a href="#tickets">チケット</a><a href="#d0">7/20</a><a href="#d1">7/21</a><a href="#d2">7/22</a><a href="#d3">7/23</a><a href="#d4">7/24</a><a href="#d5">7/25</a><a href="#d6">7/26</a><a href="#d7">7/27</a><a href="#d8">7/28</a><a href="#d9">7/29</a><a href="#hotels">ホテル</a><a href="#restaurants">食事</a><a href="#airport-guide">空港</a><a href="#taxi-guide">タクシー</a><a href="#phrase-guide">会話</a></nav><main><section class="panel homehero" id="home"><div class="herohead"><div><h2>🧭 今日の案内</h2><div class="sub" id="todayLabel">旅行日程を確認中…</div></div><span class="todaybadge" id="localTime">--:--</span></div><div class="nextcard"><div class="sub">次の目的地</div><div class="nextname" id="nextName">読み込み中…</div><div class="nextmeta" id="nextMeta"></div><div class="bigactions"><a id="walkNav" class="bigbtn primary" target="_blank">🚶 現在地から徒歩ナビ</a><a id="driveNav" class="bigbtn" target="_blank">🚕 車でナビ</a><button id="showTaxi" class="bigbtn taxi">運転手に見せる</button></div></div><div class="todaytickets"><h3>🎫 今日使うチケット</h3><div id="todayTickets"></div></div></section><section class="panel" id="tickets"><h2>🎫 チケット一覧</h2><div class="sub">タップするとQR・PDF画像をアプリ内で直接表示します</div><div class="ticketgrid"><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/casabatllo_katsuyuki.png','assets/casabatllo_yuriko.png'], 'カサ・バトリョ')">🎫 カサ・バトリョ</button><div class="small">7/22 10:00</div><div class="muted">2名・予約102421268</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/sagrada_01.png','assets/sagrada_02.png'], 'サグラダ・ファミリア')">🎫 サグラダ・ファミリア</button><div class="small">7/22 16:15／生誕の塔16:30</div><div class="muted">2名・予約101272579</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/tickets_01.png','assets/tickets_02.png'], 'カサ・ミラ')">🎫 カサ・ミラ</button><div class="small">7/23 15:00</div><div class="muted">2名・予約102425702</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/guell_01.png','assets/guell_02.png'], 'グエル公園')">🎫 グエル公園</button><div class="small">7/23 10:30</div><div class="muted">2名・Booking 8652195</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/tickets_17.png','assets/tickets_18.png','assets/tickets_19.png','assets/tickets_20.png'], 'モンセラット')">🎫 モンセラット</button><div class="small">7/24 13:45</div><div class="muted">2名・予約101845669</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/tickets_03.png','assets/tickets_04.png'], 'iryo')">🚄 iryo</button><div class="small">7/25 11:18</div><div class="muted">1号車4A・4B・OLXF6I</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/tickets_05.png','assets/tickets_06.png','assets/tickets_07.png','assets/tickets_08.png','assets/tickets_09.png'], 'Renfe')">🚄 Renfe</button><div class="small">7/27 往復</div><div class="muted">G6VPSM</div></div><div class="tcard"><button class="ticketbtn flightbtn" onclick="openBoardingPass(['assets/tickets_21.png','assets/tickets_22.png','assets/tickets_23.png','assets/tickets_24.png','assets/tickets_25.png','assets/tickets_26.png'], 'エミレーツ搭乗券')">✈️ エミレーツ</button><div class="small">7/20往路・7/28復路</div><div class="muted">予約FBAB8F</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/tickets_15.png','assets/tickets_16.png'], 'マドリード王宮')">🎫 マドリード王宮</button><div class="small">7/26 10:15</div><div class="muted">2名・R116549946</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/tickets_13.png','assets/tickets_14.png'], 'プラド美術館')">🎫 プラド美術館</button><div class="small">7/26 14:00</div><div class="muted">2名・M312847F</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/tickets_10.png','assets/tickets_11.png'], 'トレド大聖堂')">🎫 トレド大聖堂</button><div class="small">7/27 10:00</div><div class="muted">2名・101851118</div></div><div class="tcard"><button class="ticketbtn" onclick="openGallery(['assets/tickets_12.png'], '800周年展')">🎫 800周年展</button><div class="small">7/27 11:30</div><div class="muted">2名・注文5683・24€</div></div></div></section><section class="day" id="d0"><h2>7/20（月）</h2><div class="sub">成田出発</div><div class="item"><div class="time">19:00頃</div><div><div class="place">成田空港 P2南棟</div><div class="meta">🚕 自家用車</div><div class="note">予約297898。BMW白。駐車位置・柱番号を撮影</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Narita+Airport+P2+Parking">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Narita+Airport+P2+Parking')">URLコピー</button></div></div></div><div class="item"><div class="time">22:30</div><div><div class="place">EK319 成田発</div><div class="meta">🚕 エミレーツ航空</div><div class="note">ドバイ乗継。日本→ドバイは表示時刻に時差5時間を含む</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Narita+Airport+Terminal+1">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Narita+Airport+Terminal+1')">URLコピー</button><button class="btn ticket" onclick="openBoardingPass(['assets/tickets_21.png','assets/tickets_22.png','assets/tickets_23.png','assets/tickets_24.png','assets/tickets_25.png','assets/tickets_26.png'], 'エミレーツ搭乗券')">🎫 チケット表示</button></div></div></div><label class="check"><input id="day1" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section><section class="day" id="d1"><h2>7/21（火）</h2><div class="sub">バルセロナ到着</div><div class="item"><div class="time">13:25</div><div><div class="place">バルセロナ着</div><div class="meta">🚕 入国・荷物60〜90分</div><div class="note">混雑時はホテル到着17時頃</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Barcelona+Airport">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Barcelona+Airport')">URLコピー</button></div></div></div><div class="item"><div class="time">15:30〜17:00</div><div><div class="place">Renaissance Barcelona</div><div class="meta">🚕 タクシー30〜45分</div><div class="note">Pau Claris 122／+34 932 72 38 10／確認80761195</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel')">URLコピー</button></div></div></div><div class="item"><div class="time">夕方</div><div><div class="place">グラシア通り散策</div><div class="meta">🚕 徒歩5〜15分</div><div class="note">ツイン最優先。空室があればアップグレード相談</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Passeig+de+Gracia+Barcelona">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Passeig+de+Gracia+Barcelona')">URLコピー</button></div></div></div><div class="item"><div class="time">20:30</div><div><div class="place">El Nacional</div><div class="meta">🚕 徒歩約10分</div><div class="note">生ハム、クロケッタ、パン・コン・トマテ、カヴァ</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=El+Nacional+Barcelona">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=El+Nacional+Barcelona')">URLコピー</button></div></div></div><label class="check"><input id="day2" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section><section class="day" id="d2"><h2>7/22（水）</h2><div class="sub">ガウディ建築</div><div class="item"><div class="time">10:00</div><div><div class="place">カサ・バトリョ</div><div class="meta">🚕 徒歩5〜10分</div><div class="note">QR画像2枚をアプリで表示。イヤホン・充電確認</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa+Batllo">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Casa+Batllo')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/casabatllo_katsuyuki.png','assets/casabatllo_yuriko.png'], 'カサ・バトリョ')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">11:30</div><div><div class="place">ボケリア市場</div><div class="meta">🚕 徒歩15〜20分</div><div class="note">市場散策</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=La+Boqueria">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=La+Boqueria')">URLコピー</button></div></div></div><div class="item"><div class="time">12:00</div><div><div class="place">El Quim de la Boqueria</div><div class="meta">🚕 市場内</div><div class="note">卵とマッシュルーム、魚介鉄板</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=El+Quim+de+la+Boqueria">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=El+Quim+de+la+Boqueria')">URLコピー</button></div></div></div><div class="item"><div class="time">13:30〜15:15</div><div><div class="place">ホテル休憩</div><div class="meta">🚕 タクシー約10分</div><div class="note">午後に備える</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel')">URLコピー</button></div></div></div><div class="item"><div class="time">16:15</div><div><div class="place">サグラダ・ファミリア</div><div class="meta">🚕 タクシー15〜20分</div><div class="note">Marina入口。写真付き身分証必携</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Sagrada+Familia">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Sagrada+Familia')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/sagrada_01.png','assets/sagrada_02.png'], 'サグラダ・ファミリア')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">16:30</div><div><div class="place">生誕のファサード塔</div><div class="meta">🚕 館内</div><div class="note">上りエレベーター・下り階段</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Sagrada+Familia+Nativity+Tower">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Sagrada+Familia+Nativity+Tower')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/sagrada_01.png','assets/sagrada_02.png'], 'サグラダ・ファミリア')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">17:15〜19:15</div><div><div class="place">聖堂・博物館・ショップ</div><div class="meta">🚕 館内徒歩</div><div class="note">ゆっくり見学</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Sagrada+Familia">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Sagrada+Familia')">URLコピー</button></div></div></div><div class="item"><div class="time">20:00</div><div><div class="place">Botafumeiro</div><div class="meta">🚕 タクシー待ち込み25〜40分</div><div class="note">7/22 20:00正式確定。2名・デポジット100€</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Botafumeiro+Barcelona">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Botafumeiro+Barcelona')">URLコピー</button></div></div></div><label class="check"><input id="day3" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section><section class="day" id="d3"><h2>7/23（木）</h2><div class="sub">グエル公園・カサミラ・魚介</div><div class="item"><div class="time">10:30</div><div><div class="place">グエル公園</div><div class="meta">🚕 タクシー15〜25分</div><div class="note">2名分チケット取得済み。10:30入場、予約時刻から30分以内まで有効。再入場不可</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Park+Guell">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Park+Guell')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/guell_01.png','assets/guell_02.png'], 'グエル公園')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">12:45</div><div><div class="place">Bar Cañete</div><div class="meta">🚕 タクシー20〜30分</div><div class="note">パン・コン・トマテ、ハモン、旬の魚介</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bar+Canete+Barcelona">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Bar+Canete+Barcelona')">URLコピー</button></div></div></div><div class="item"><div class="time">15:00</div><div><div class="place">カサ・ミラ</div><div class="meta">🚕 タクシー10〜15分</div><div class="note">屋上、屋根裏、中庭</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa+Mila">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Casa+Mila')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/tickets_01.png','assets/tickets_02.png'], 'カサ・ミラ')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">16:30〜18:45</div><div><div class="place">ホテル休憩・散策</div><div class="meta">🚕 徒歩5〜10分</div><div class="note">El Xampanyetは行かない</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Renaissance+Barcelona+Hotel')">URLコピー</button></div></div></div><div class="item"><div class="time">19:30</div><div><div class="place">RíasKRU</div><div class="meta">🚕 タクシー15〜25分</div><div class="note">2名予約済。少量・揚げ物少なめ希望済み</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=RiasKRU+Barcelona">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=RiasKRU+Barcelona')">URLコピー</button></div></div></div><label class="check"><input id="day4" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section>
+<section class="day" id="d4">
+  <h2>7/24（金）</h2>
+  <div class="sub">モンセラット｜黒いマリアへの行き方詳細</div>
+
+  <div class="item">
+    <div class="time">09:20頃</div>
+    <div>
+      <div class="place">ホテルを出発</div>
+      <div class="meta">🚕 Renaissance Barcelona → Plaça Espanya駅：約10〜15分</div>
+      <div class="note">運転手には「FGC, Plaça Espanya」と伝える。駅構内で切符を買う時間を確保する。</div>
+      <div class="actions">
+        <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=FGC+Pla%C3%A7a+Espanya+Barcelona">📍 Plaça Espanya駅</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">09:35〜10:10</div>
+    <div>
+      <div class="place">FGCの切符を購入</div>
+      <div class="meta">🚇 駅ではオレンジ色のFGC表示／Llobregat–Anoia線を探す</div>
+      <div class="note">
+        窓口または券売機で「Montserrat via Cremallera（登山鉄道）」の往復を購入。
+        <b>Aeri（ロープウェイ）ではなくCremalleraを選ぶ。</b>
+        行先はMonistrol de Montserrat。購入後は電光掲示板でR5・Manresa方面とホームを再確認する。
+      </div>
+      <div class="actions">
+        <button class="btn copy" onclick="cp('Two return tickets to Montserrat via the Cremallera, please.')">英語をコピー</button>
+        <button class="btn copy" onclick="cp('Dos billetes de ida y vuelta a Montserrat por el Cremallera, por favor.')">スペイン語をコピー</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">10:36</div>
+    <div>
+      <div class="place">FGC R5に乗車</div>
+      <div class="meta">🚆 Barcelona–Plaça Espanya → Monistrol de Montserrat：約64分</div>
+      <div class="note">R5のManresa方面。約23駅。車内表示とアナウンスで「Monistrol de Montserrat」を確認する。</div>
+      <div class="actions">
+        <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Monistrol+de+Montserrat+FGC">📍 Monistrol駅</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">11:40頃</div>
+    <div>
+      <div class="place">Monistrol de Montserratで乗換</div>
+      <div class="meta">🚞 Cremallera de Montserrat（登山鉄道）へ乗換：約20分</div>
+      <div class="note">
+        改札外へ出ず、緑色の「Cremallera de Montserrat／Montserrat」表示に従う。
+        乗換時間が短い場合は写真撮影より移動を優先。登山鉄道は進行方向右側・左側とも山景色が楽しめる。
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">12:05〜12:15頃</div>
+    <div>
+      <div class="place">Montserrat駅・修道院地区に到着</div>
+      <div class="meta">🚶 駅からエスカレーター／階段でPlaça de Santa Maria方面へ</div>
+      <div class="note">
+        駅を出たら「Basilica／Monestir」表示に従って上へ進む。
+        広場まで約5〜10分。坂や段差があるため、急がず移動する。
+      </div>
+      <div class="actions">
+        <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Montserrat+Monastery+Basilica">📍 バシリカ</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">12:15〜13:10</div>
+    <div>
+      <div class="place">Restaurant Abat Cisnerosでランチ</div>
+      <div class="meta">🚶 駅・広場から徒歩約3〜5分</div>
+      <div class="note">
+        13:30には店を出る。スープ、魚または肉などを手早く。注文時に「13:45に予約がある」と伝える。
+      </div>
+      <div class="actions">
+        <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurant+Abat+Cisneros+Montserrat">📍 レストラン</a>
+        <button class="btn copy" onclick="cp('We have a reservation for the Black Madonna at 1:45 p.m., so we need to leave by 1:30 p.m.')">説明をコピー</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">13:30</div>
+    <div>
+      <div class="place">黒いマリアの入場口へ</div>
+      <div class="meta">🚶 Restaurant Abat Cisneros → バシリカ：約3〜5分</div>
+      <div class="note">
+        Plaça de Santa Mariaからバシリカ正面へ向かい、
+        <b>「Cambril de la Mare de Déu」「La Moreneta」「Black Madonna」</b>の表示を探す。
+        一般の聖堂見学列と黒いマリアの予約列が分かれている場合があるため、
+        係員にQR画面と「13:45 reservation」を見せる。
+      </div>
+      <div class="actions">
+        <button class="btn copy" onclick="cp('We have a reservation for the Black Madonna at 1:45 p.m. Where is the entrance?')">英語をコピー</button>
+        <button class="btn copy" onclick="cp('Tenemos una reserva para la Virgen de Montserrat a las 13:45. ¿Dónde está la entrada?')">スペイン語をコピー</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">13:45</div>
+    <div>
+      <div class="place">黒いマリア像（ラ・モレネータ）</div>
+      <div class="meta">🎫 2名・予約番号101845669</div>
+      <div class="note">
+        チケット画像を表示して入場。像の前では流れを止めず、短時間で参拝・撮影する。
+        チケットには博物館と視聴覚スペースも含まれる。
+      </div>
+      <div class="actions">
+        <button class="btn ticket" onclick="openGallery(['assets/tickets_17.png','assets/tickets_18.png','assets/tickets_19.png','assets/tickets_20.png'], 'モンセラット')">🎫 チケット表示</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">14:15〜16:00</div>
+    <div>
+      <div class="place">バシリカ・博物館・展望・ショップ</div>
+      <div class="meta">🚶 修道院地区内</div>
+      <div class="note">
+        優先順位は①バシリカ内部 ②博物館 ③展望 ④ショップ。
+        帰りのCremalleraとR5の接続時刻を、到着時に駅の掲示板で写真撮影しておく。
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">16:00頃</div>
+    <div>
+      <div class="place">バルセロナへ戻る</div>
+      <div class="meta">🚞 Montserrat → Monistrol → R5 → Plaça Espanya：約1時間40分〜2時間</div>
+      <div class="note">
+        Montserrat駅でCremalleraに乗り、Monistrol de MontserratでR5のBarcelona–Plaça Espanya方面へ。
+        乗換時は行先表示「Barcelona／Plaça Espanya」を確認する。
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">18:00〜19:30</div>
+    <div>
+      <div class="place">ホテル休憩・着替え</div>
+      <div class="meta">🚕 Plaça Espanya → ホテル：約10〜15分</div>
+      <div class="note">山歩き後なのでシャワーと休憩を優先する。</div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="time">20:00〜22:00</div>
+    <div>
+      <div class="place">Bardeni el Meatbar–Caldeni</div>
+      <div class="meta">🚕 ホテルから約10〜15分</div>
+      <div class="note">2名予約済み。最低1人2皿。量が少なくシェアしやすい4皿を相談する。</div>
+      <div class="actions">
+        <a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bardeni+Barcelona">📍 地図</a>
+      </div>
+    </div>
+  </div>
+
+  <label class="check"><input id="day5" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label>
+</section>
+
+<div class="panel">
+  <h2>🎒 モンセラット当日の持ち物</h2>
+  <label class="check"><input id="mont1" type="checkbox"><span>黒いマリアのチケット画像</span></label>
+  <label class="check"><input id="mont2" type="checkbox"><span>FGC・Cremallera往復券</span></label>
+  <label class="check"><input id="mont3" type="checkbox"><span>歩きやすい靴</span></label>
+  <label class="check"><input id="mont4" type="checkbox"><span>水・帽子・日焼け止め</span></label>
+  <label class="check"><input id="mont5" type="checkbox"><span>薄手の羽織り</span></label>
+  <label class="check"><input id="mont6" type="checkbox"><span>帰りの列車時刻を駅で撮影</span></label>
+</div>
+<section class="day" id="d5"><h2>7/25（土）</h2><div class="sub">マドリードへ</div><div class="item"><div class="time">10:15</div><div><div class="place">Barcelona Santsへ</div><div class="meta">🚕 タクシー10〜20分</div><div class="note">出発30〜45分前到着</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Barcelona+Sants+Station">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Barcelona+Sants+Station')">URLコピー</button></div></div></div><div class="item"><div class="time">11:18〜14:42</div><div><div class="place">iryo</div><div class="meta">🚕 高速鉄道</div><div class="note">1号車4A・4B</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Madrid+Atocha+Station">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Madrid+Atocha+Station')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/tickets_03.png','assets/tickets_04.png'], 'iryo')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">15:15頃</div><div><div class="place">The Palace Madrid</div><div class="meta">🚕 タクシー10〜15分</div><div class="note">Plaza de las Cortes 7／+34 913 60 80 00／確認80754846</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=The+Palace+Madrid">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=The+Palace+Madrid')">URLコピー</button></div></div></div><div class="item"><div class="time">20:30</div><div><div class="place">Lobito de Mar</div><div class="meta">🚕 タクシー10〜15分</div><div class="note">未予約。魚介米料理、マグロ、炭火魚</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Lobito+de+Mar+Madrid">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Lobito+de+Mar+Madrid')">URLコピー</button></div></div></div><label class="check"><input id="day6" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section><section class="day" id="d6"><h2>7/26（日）</h2><div class="sub">王宮・市場・プラド</div><div class="item"><div class="time">10:15</div><div><div class="place">マドリード王宮</div><div class="meta">🚕 タクシー10〜15分</div><div class="note">大階段、王座の間、武器庫</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Royal+Palace+Madrid">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Royal+Palace+Madrid')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/tickets_15.png','assets/tickets_16.png'], 'マドリード王宮')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">12:00〜13:10</div><div><div class="place">サン・ミゲル市場</div><div class="meta">🚕 徒歩8〜10分</div><div class="note">牡蠣、タコ、ピンチョス、生ハム</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado+de+San+Miguel">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Mercado+de+San+Miguel')">URLコピー</button></div></div></div><div class="item"><div class="time">14:00</div><div><div class="place">プラド美術館</div><div class="meta">🚕 タクシー10〜15分</div><div class="note">ラス・メニーナス、ゴヤ、快楽の園</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Prado+Museum">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Prado+Museum')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/tickets_13.png','assets/tickets_14.png'], 'プラド美術館')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">20:30</div><div><div class="place">SADDLE</div><div class="meta">🚕 タクシー約10分</div><div class="note">未予約。スマートエレガント</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Saddle+Madrid">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Saddle+Madrid')">URLコピー</button></div></div></div><label class="check"><input id="day7" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section><section class="day" id="d7"><h2>7/27（月）</h2><div class="sub">トレド日帰り</div><div class="item"><div class="time">08:15〜08:49</div><div><div class="place">Avantでトレドへ</div><div class="meta">🚕 Renfe</div><div class="note">G6VPSM</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Toledo+Train+Station">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Toledo+Train+Station')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/tickets_05.png','assets/tickets_06.png','assets/tickets_07.png','assets/tickets_08.png','assets/tickets_09.png'], 'Renfe')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">10:00</div><div><div class="place">トレド大聖堂</div><div class="meta">🚕 タクシー10〜15分</div><div class="note">主祭壇、エル・グレコ、トランスパレンテ</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Toledo+Cathedral">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Toledo+Cathedral')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/tickets_10.png','assets/tickets_11.png'], 'トレド大聖堂')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">11:30</div><div><div class="place">800周年展</div><div class="meta">🚕 徒歩</div><div class="note">2名・注文5683・24€。10分前にPuerta del Molleteへ</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Toledo+Cathedral">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Toledo+Cathedral')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/tickets_12.png'], '800周年展')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">13:30</div><div><div class="place">La Orza</div><div class="meta">🚕 徒歩約5分</div><div class="note">2名予約済。ジビエ、トレド料理</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=La+Orza+Toledo">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=La+Orza+Toledo')">URLコピー</button></div></div></div><div class="item"><div class="time">16:25〜16:59</div><div><div class="place">AvantでMadridへ</div><div class="meta">🚕 Renfe</div><div class="note">G6VPSM</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Madrid+Atocha+Station">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Madrid+Atocha+Station')">URLコピー</button><button class="btn ticket" onclick="openGallery(['assets/tickets_05.png','assets/tickets_06.png','assets/tickets_07.png','assets/tickets_08.png','assets/tickets_09.png'], 'Renfe')">🎫 チケット表示</button></div></div></div><div class="item"><div class="time">夜</div><div><div class="place">ホテル周辺で軽く</div><div class="meta">🚕 徒歩</div><div class="note">翌日の軽食も前日に購入</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=The+Palace+Madrid">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=The+Palace+Madrid')">URLコピー</button></div></div></div><label class="check"><input id="day8" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section><section class="day" id="d8"><h2>7/28（火）</h2><div class="sub">マドリード出発</div><div class="item"><div class="time">朝</div><div><div class="place">ホテル内で軽食</div><div class="meta">🚕 ホテル</div><div class="note">前日に購入したサンドイッチ、果物など</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=The+Palace+Madrid">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=The+Palace+Madrid')">URLコピー</button></div></div></div><div class="item"><div class="time">10:00〜11:00</div><div><div class="place">最後の散策・買い物</div><div class="meta">🚕 徒歩</div><div class="note">荷造り・チェックアウト</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Paseo+del+Prado+Madrid">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Paseo+del+Prado+Madrid')">URLコピー</button></div></div></div><div class="item"><div class="time">11:15</div><div><div class="place">ホテル出発</div><div class="meta">🚕 タクシー25〜40分</div><div class="note">渋滞を考慮</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Madrid+Airport">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Madrid+Airport')">URLコピー</button></div></div></div><div class="item"><div class="time">15:25</div><div><div class="place">EK142 Madrid発</div><div class="meta">🚕 エミレーツ航空</div><div class="note">ドバイ→成田は時差5時間で長く見えるが実飛行は約10時間</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Madrid+Airport">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Madrid+Airport')">URLコピー</button><button class="btn ticket" onclick="openBoardingPass(['assets/tickets_21.png','assets/tickets_22.png','assets/tickets_23.png','assets/tickets_24.png','assets/tickets_25.png','assets/tickets_26.png'], 'エミレーツ搭乗券')">🎫 チケット表示</button></div></div></div><label class="check"><input id="day9" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section><section class="day" id="d9"><h2>7/29（水）</h2><div class="sub">成田到着</div><div class="item"><div class="time">17:35</div><div><div class="place">成田着</div><div class="meta">🚕 入国・荷物受取</div><div class="note">P2南棟で車を受け取り帰宅</div><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Narita+Airport+Terminal+1">📍 地図</a><button class="btn copy" onclick="cp('https://www.google.com/maps/search/?api=1&query=Narita+Airport+Terminal+1')">URLコピー</button><button class="btn ticket" onclick="openBoardingPass(['assets/tickets_21.png','assets/tickets_22.png','assets/tickets_23.png','assets/tickets_24.png','assets/tickets_25.png','assets/tickets_26.png'], 'エミレーツ搭乗券')">🎫 チケット表示</button></div></div></div><label class="check"><input id="day10" type="checkbox"><span>この日の予約・持ち物を確認済み</span></label></section><section class="panel" id="hotels"><h2>🏨 ホテル</h2>
+<table><tr><th>ホテル</th><th>連絡先・確認番号</th></tr>
+<tr><td>Renaissance Barcelona</td><td>Pau Claris 122<br><a href="tel:+34932723810">+34 932 72 38 10</a><br>80761195<br>ツイン最優先・アップグレード相談</td></tr>
+<tr><td>The Palace Madrid</td><td>Plaza de las Cortes 7<br><a href="tel:+34913608000">+34 913 60 80 00</a><br>80754846</td></tr>
+</table></section><section class="panel" id="restaurants"><h2>🍽 レストラン予約</h2>
+<table><tr><th>日付</th><th>店</th><th>状態</th></tr>
+<tr><td>7/21</td><td>El Nacional 20:30</td><td>予約不要</td></tr>
+<tr><td>7/22</td><td>Botafumeiro 20:00</td><td>予約確定・100€</td></tr>
+<tr><td>7/23</td><td>RíasKRU 19:30</td><td>予約済み</td></tr>
+<tr><td>7/24</td><td>Bardeni 20:00</td><td>予約済み</td></tr>
+<tr><td>7/25</td><td>Lobito de Mar 20:30</td><td>未予約</td></tr>
+<tr><td>7/26</td><td>SADDLE 20:30</td><td>未予約</td></tr>
+<tr><td>7/27</td><td>La Orza 13:30</td><td>予約済み</td></tr>
+</table></section>
+<section class="panel" id="airport-guide">
+  <h2>✈️ 空港・乗り継ぎ・ラウンジ</h2>
+  <div class="guidegrid">
+    <div class="guidecard">
+      <h3>ドバイ空港（DXB）乗り継ぎ</h3>
+      <ol>
+        <li>降機後は「Connections / Flight Connections」へ進む</li>
+        <li>乗り継ぎ保安検査を通過</li>
+        <li>搭乗券で次便のコンコース・ゲートを確認</li>
+        <li>A・B・C間の移動を見込み、搭乗開始45分前にはゲートへ</li>
+      </ol>
+      <div class="phrasebox"><b>英語：</b>Where is the connection gate for my flight to Barcelona?</div>
+    </div>
+    <div class="guidecard">
+      <h3>ドバイのラウンジ</h3>
+      <p><b>Emirates Lounge：</b>ターミナル3の各コンコース。対象条件または有料利用。</p>
+      <p><b>Ahlan / Plaza Premium：</b>利用するゲートと同じコンコースを優先。</p>
+      <p>シャワーを使う場合も、ゲートまで30〜45分を確保。</p>
+    </div>
+    <div class="guidecard">
+      <h3>マドリード空港（MAD）</h3>
+      <ol>
+        <li>Emiratesはターミナル4でチェックイン</li>
+        <li>保安検査後、必要に応じてAPMでT4Sへ</li>
+        <li>出国審査を通過し、Sゲートへ</li>
+      </ol>
+      <div class="phrasebox"><b>運転手に見せる：</b>Madrid Airport, Terminal 4, Emirates departures, please.</div>
+    </div>
+    <div class="guidecard">
+      <h3>マドリードのラウンジ</h3>
+      <p><b>Neptuno：</b>T4Sの非シェンゲン便向け第一候補。</p>
+      <p><b>Gran Vía：</b>T4SのSゲート側で便利。</p>
+      <p>ラウンジ受付で搭乗券と利用カードを提示。</p>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="taxi-guide">
+  <h2>🚖 都市別タクシー案内</h2>
+  <div class="guidegrid">
+    <div class="guidecard">
+      <h3>バルセロナ空港 → ホテル</h3>
+      <p>空港の正規タクシー乗場で、<b>黒と黄色の車両</b>を利用。</p>
+      <p>メーター運賃に空港・荷物等の加算が付く場合あり。カード利用可。</p>
+      <div class="phrasebox">
+        <b>運転手に見せる</b><br>
+        Renaissance Barcelona Hotel<br>
+        Pau Claris 122, Barcelona<br>
+        Please take us to this hotel.
+      </div>
+    </div>
+    <div class="guidecard">
+      <h3>マドリード市内 → 空港</h3>
+      <p>ホテルで正規タクシーを手配するのが確実。</p>
+      <p>行き先は<b>Madrid Airport Terminal 4 / Emirates</b>。</p>
+      <p>中心部と空港の移動は定額対象となることがあるため、乗車時に確認。</p>
+      <div class="phrasebox">Al aeropuerto de Madrid, Terminal 4, salidas de Emirates, por favor.</div>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="phrase-guide">
+  <h2>🗣 ホテル・レストラン・緊急会話</h2>
+  <div class="guidegrid">
+    <div class="guidecard">
+      <h3>ホテル</h3>
+      <div class="phrasebox">予約しています。<br><b>I have a reservation.</b><br>Tengo una reserva.</div>
+      <div class="phrasebox">可能であれば、無料でアップグレードしていただけますか？<br><b>If possible, could you offer us a complimentary room upgrade?</b><br>Si es posible, ¿podrían ofrecernos una mejora de habitación sin coste?</div>
+      <div class="phrasebox">ツインルームを希望しています。<br><b>We requested a twin room.</b><br>Hemos solicitado una habitación con dos camas.</div>
+      <div class="phrasebox">荷物を預かってください。<br><b>Could you keep our luggage?</b><br>¿Puede guardar nuestro equipaje?</div>
+    </div>
+    <div class="guidecard">
+      <h3>レストラン・買い物</h3>
+      <div class="phrasebox">おすすめ料理は何ですか？<br><b>What do you recommend?</b><br>¿Qué recomienda?</div>
+      <div class="phrasebox">お会計をお願いします。<br><b>The bill, please.</b><br>La cuenta, por favor.</div>
+      <div class="phrasebox">カードで支払えますか？<br><b>Can I pay by card?</b><br>¿Puedo pagar con tarjeta?</div>
+      <div class="phrasebox">Tax Freeはできますか？<br><b>Is Tax Free available?</b><br>¿Hay Tax Free?</div>
+    </div>
+    <div class="guidecard">
+      <h3>緊急</h3>
+      <div class="phrasebox">助けてください。<br><b>Please help me.</b><br>Ayúdeme, por favor.</div>
+      <div class="phrasebox">医師が必要です。<br><b>I need a doctor.</b><br>Necesito un médico.</div>
+      <div class="phrasebox">財布を盗まれました。<br><b>My wallet was stolen.</b><br>Me han robado la cartera.</div>
+      <p><b>緊急電話：112</b></p>
+    </div>
+    <div class="guidecard">
+      <h3>現地の注意</h3>
+      <p>バッグは前に持ち、スマホをテーブル上に置かない。</p>
+      <p>カード決済はEURを選び、日本円建て換算は避ける。</p>
+      <p>チップは義務ではない。良いサービスでは端数または5〜10％程度。</p>
+      <p>VAT還付品・レシート・書類は空港ですぐ出せるようまとめる。</p>
+    </div>
+  </div>
+</section>
+</main><div id="taxiModal" class="modal taxi-modal"><div class="modalbar" style="background:#111"><b>タクシー運転手に見せる</b><button class="close" onclick="closeTaxi()">閉じる</button></div><div id="taxiContent" class="modalcontent"></div></div><div id="modal" class="modal"><div class="modalbar"><b id="mtitle">チケット</b><div><button id="brightBtn" class="bright" onclick="toggleBright()">☀ 明るく表示</button> <button class="close" onclick="closeGallery()">閉じる</button></div></div><div id="mcontent" class="modalcontent"></div></div><div id="toast" class="toast">コピーしました</div><script>
+const root=document.documentElement;root.setAttribute('data-theme',localStorage.getItem('theme')||'light');
+document.getElementById('theme').onclick=()=>{let t=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',t);localStorage.setItem('theme',t)};
+let wakeLock=null;
+async function requestWake(){try{if('wakeLock' in navigator)wakeLock=await navigator.wakeLock.request('screen')}catch(e){}}
+async function releaseWake(){try{if(wakeLock){await wakeLock.release();wakeLock=null}}catch(e){}}
+let boardingState={imgs:[],title:'',index:0,scale:1,rotation:0};
+function openGallery(imgs,title){document.getElementById('mtitle').textContent=title;document.getElementById('mcontent').innerHTML=imgs.map((x,i)=>`<div class="qrslide"><img src="${x}" alt="${title} ${i+1}"></div>`).join('');document.getElementById('modal').className='modal show qrmode';document.body.style.overflow='hidden';requestWake()}
+function openBoardingPass(imgs,title){boardingState={imgs:[...imgs],title,index:0,scale:1.35,rotation:0};document.getElementById('mtitle').textContent=title;document.getElementById('brightBtn').textContent='☀ 全画面';document.getElementById('modal').className='modal show boarding';renderBoarding();document.body.style.overflow='hidden';requestWake();setTimeout(()=>enterFullscreen(),150)}
+function renderBoarding(){const st=boardingState;const x=st.imgs[st.index];document.getElementById('mcontent').innerHTML=`<div class="boarding-stage"><div class="boarding-tip">バーコード部分を大きくし、係員に画面を向けてください</div><div class="boarding-image-wrap" onclick="toggleBoardingUI()"><img class="boarding-image" src="${x}" alt="${st.title} ${st.index+1}" style="transform:scale(${st.scale}) rotate(${st.rotation}deg)"></div><div class="boarding-pager">${st.index+1} / ${st.imgs.length}</div><div class="boarding-controls"><button onclick="event.stopPropagation();boardingPrev()">◀ 前へ</button><button class="primary" onclick="event.stopPropagation();boardingZoom()">🔍 拡大</button><button onclick="event.stopPropagation();boardingRotate()">↻ 回転</button><button onclick="event.stopPropagation();boardingNext()">次へ ▶</button></div></div>`}
+function boardingPrev(){boardingState.index=(boardingState.index-1+boardingState.imgs.length)%boardingState.imgs.length;boardingState.scale=1.35;boardingState.rotation=0;renderBoarding()}
+function boardingNext(){boardingState.index=(boardingState.index+1)%boardingState.imgs.length;boardingState.scale=1.35;boardingState.rotation=0;renderBoarding()}
+function boardingZoom(){const levels=[1,1.35,1.7,2.1];const i=levels.findIndex(v=>Math.abs(v-boardingState.scale)<.05);boardingState.scale=levels[(i+1)%levels.length];renderBoarding()}
+function boardingRotate(){boardingState.rotation=(boardingState.rotation+90)%360;renderBoarding()}
+function toggleBoardingUI(){document.getElementById('modal').classList.toggle('hide-ui')}
+async function enterFullscreen(){const modal=document.getElementById('modal');try{if(!document.fullscreenElement&&modal.requestFullscreen)await modal.requestFullscreen()}catch(e){}requestWake()}
+function closeGallery(){const modal=document.getElementById('modal');modal.className='modal';document.getElementById('brightBtn').textContent='☀ 明るく表示';document.body.style.overflow='';releaseWake();if(document.fullscreenElement)document.exitFullscreen().catch(()=>{})}
+async function toggleBright(){const modal=document.getElementById('modal');try{if(!document.fullscreenElement)await modal.requestFullscreen();else await document.exitFullscreen()}catch(e){}requestWake();toast('白背景・全画面で表示します')}
+function toast(x){let t=document.getElementById('toast');t.textContent=x;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}
+function cp(x){navigator.clipboard.writeText(x).then(()=>toast('コピーしました')).catch(()=>prompt('コピーしてください',x))}
+document.querySelectorAll('input[type=checkbox]').forEach(x=>{let k='chk-'+x.id;x.checked=localStorage.getItem(k)==='1';x.onchange=()=>localStorage.setItem(k,x.checked?'1':'0')});
+
+const tripDates=['2026-07-20','2026-07-21','2026-07-22','2026-07-23','2026-07-24','2026-07-25','2026-07-26','2026-07-27','2026-07-28','2026-07-29'];
+const ticketsByDate={
+ '2026-07-20':[{name:'エミレーツ 往路',time:'22:30',imgs:['assets/tickets_21.png','assets/tickets_22.png','assets/tickets_23.png','assets/tickets_24.png','assets/tickets_25.png','assets/tickets_26.png']}],
+ '2026-07-22':[{name:'カサ・バトリョ',time:'10:00',imgs:['assets/casabatllo_katsuyuki.png','assets/casabatllo_yuriko.png']},{name:'サグラダ・ファミリア',time:'16:15／塔16:30',imgs:['assets/sagrada_01.png','assets/sagrada_02.png']}],
+ '2026-07-23':[{name:'グエル公園',time:'10:30',imgs:['assets/guell_01.png','assets/guell_02.png']},{name:'カサ・ミラ',time:'15:00',imgs:['assets/tickets_01.png','assets/tickets_02.png']}],
+ '2026-07-24':[{name:'モンセラット',time:'13:45',imgs:['assets/tickets_17.png','assets/tickets_18.png','assets/tickets_19.png','assets/tickets_20.png']}],
+ '2026-07-25':[{name:'iryo バルセロナ→マドリード',time:'11:18',imgs:['assets/tickets_03.png','assets/tickets_04.png']}],
+ '2026-07-26':[{name:'マドリード王宮',time:'10:15',imgs:['assets/tickets_15.png','assets/tickets_16.png']},{name:'プラド美術館',time:'14:00',imgs:['assets/tickets_13.png','assets/tickets_14.png']}],
+ '2026-07-27':[{name:'Renfe マドリード⇄トレド',time:'08:15／16:25',imgs:['assets/tickets_05.png','assets/tickets_06.png','assets/tickets_07.png','assets/tickets_08.png','assets/tickets_09.png']},{name:'トレド大聖堂',time:'10:00',imgs:['assets/tickets_10.png','assets/tickets_11.png']},{name:'800周年展',time:'11:30',imgs:['assets/tickets_12.png']}],
+ '2026-07-28':[{name:'エミレーツ 復路',time:'15:25',imgs:['assets/tickets_21.png','assets/tickets_22.png','assets/tickets_23.png','assets/tickets_24.png','assets/tickets_25.png','assets/tickets_26.png']}]
+};
+const addressBook={
+ '成田空港 P2南棟':'Narita International Airport P2 South Building, Narita, Chiba','EK319 成田発':'Narita International Airport Terminal 1, Narita, Chiba','バルセロナ着':'Barcelona–El Prat Airport, Barcelona','Renaissance Barcelona':'Pau Claris, 122, 08009 Barcelona','グラシア通り散策':'Passeig de Gràcia, Barcelona','カサ・バトリョ':'Passeig de Gràcia, 43, 08007 Barcelona','サグラダ・ファミリア':'Carrer de Mallorca, 401, 08013 Barcelona','グエル公園':'Carrer d’Olot, 5, 08024 Barcelona','カサ・ミラ':'Passeig de Gràcia, 92, 08008 Barcelona','モンセラット':'Monestir de Montserrat, 08199 Montserrat, Barcelona','Barcelona-Sants駅':'Plaça dels Països Catalans, 1, 7, 08014 Barcelona','Madrid-Atocha駅':'Plaza del Emperador Carlos V, Madrid','The Palace Madrid':'Plaza de las Cortes, 7, 28014 Madrid','マドリード王宮':'Calle de Bailén, s/n, 28071 Madrid','プラド美術館':'Calle de Ruiz de Alarcón, 23, 28014 Madrid','トレド大聖堂':'Calle Cardenal Cisneros, 1, 45002 Toledo','800周年展':'Puerta del Mollete, Catedral de Toledo, Toledo','Toledo駅':'Paseo de la Rosa, s/n, 45006 Toledo','Madrid空港':'Adolfo Suárez Madrid–Barajas Airport, Madrid'};
+function localISO(d=new Date()){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Madrid',year:'numeric',month:'2-digit',day:'2-digit'}).format(d)}
+function localHM(d=new Date()){return new Intl.DateTimeFormat('ja-JP',{timeZone:'Europe/Madrid',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)}
+function parseStart(text){const m=text.match(/(\d{1,2}):(\d{2})/);return m?Number(m[1])*60+Number(m[2]):9999}
+function extractMapQuery(item){const a=item.querySelector('a[href*="google.com/maps"]');if(!a)return '';try{return new URL(a.href).searchParams.get('query')||''}catch(e){return ''}}
+function buildStops(){const out=[];document.querySelectorAll('.day').forEach((day,idx)=>{const date=tripDates[idx];day.querySelectorAll('.item').forEach(item=>{const name=item.querySelector('.place')?.textContent.trim()||'目的地';const time=item.querySelector('.time')?.textContent.trim()||'';const q=extractMapQuery(item);if(!q)return;out.push({date,name,time,mins:parseStart(time),query:q,address:addressBook[name]||q.replace(/\+/g,' ')});const actions=item.querySelector('.actions');if(actions&&!actions.querySelector('.taxishow')){const b=document.createElement('button');b.className='btn taxishow';b.textContent='🚕 運転手に見せる';b.onclick=()=>openTaxi({name,address:addressBook[name]||q.replace(/\+/g,' '),query:q});actions.appendChild(b)}})});return out}
+let currentStop=null;
+function chooseNext(stops){const today=localISO();const now=new Date();const mins=Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',hour:'2-digit',minute:'2-digit',hour12:false}).format(now).replace(':',''));const hm=Math.floor(mins/100)*60+mins%100;let candidates=stops.filter(s=>s.date===today&&s.mins>=hm-30);if(candidates.length)return candidates.sort((a,b)=>a.mins-b.mins)[0];candidates=stops.filter(s=>s.date>today);if(candidates.length)return candidates.sort((a,b)=>a.date.localeCompare(b.date)||a.mins-b.mins)[0];return stops[stops.length-1]}
+function navURL(q,mode){return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(q)}&travelmode=${mode}`}
+function openTaxi(stop){currentStop=stop;document.getElementById('taxiContent').innerHTML=`<div class="taxi-card"><div class="taxi-kicker">POR FAVOR, LLÉVEME A</div><div class="taxi-name">${stop.name}</div><div class="taxi-address">${stop.address}</div><div class="taxi-spanish">A ${stop.name}, por favor.</div><div class="taxi-help">¿Puedo pagar con tarjeta?<br><small>カードで支払えますか？</small></div><div class="bigactions"><a class="bigbtn primary" target="_blank" href="${navURL(stop.query,'driving')}">📍 地図を開く</a></div></div>`;document.getElementById('taxiModal').classList.add('show');document.body.style.overflow='hidden';requestWake()}
+function closeTaxi(){document.getElementById('taxiModal').classList.remove('show');document.body.style.overflow='';releaseWake()}
+function renderTodayTickets(date){const box=document.getElementById('todayTickets');const arr=ticketsByDate[date]||[];if(!arr.length){box.innerHTML='<div class="empty">今日使うチケットはありません。</div>';return}box.innerHTML=arr.map((t,i)=>`<div class="todayticket"><b>${t.name}</b><div class="muted">${t.time}</div><button class="ticketbtn" style="margin-top:8px" data-ti="${i}">QR・チケットを全画面表示</button></div>`).join('');box.querySelectorAll('[data-ti]').forEach(b=>b.onclick=()=>{const t=arr[Number(b.dataset.ti)];(t.name.includes('エミレーツ')?openBoardingPass(t.imgs,t.name):openGallery(t.imgs,t.name))})}
+function initHome(){const stops=buildStops();const today=localISO();currentStop=chooseNext(stops);document.getElementById('todayLabel').textContent=`スペイン時間 ${today}`;document.getElementById('localTime').textContent=localHM();setInterval(()=>document.getElementById('localTime').textContent=localHM(),30000);document.getElementById('nextName').textContent=currentStop.name;document.getElementById('nextMeta').textContent=`${currentStop.date} ${currentStop.time}｜${currentStop.address}`;document.getElementById('walkNav').href=navURL(currentStop.query,'walking');document.getElementById('driveNav').href=navURL(currentStop.query,'driving');document.getElementById('showTaxi').onclick=()=>openTaxi(currentStop);renderTodayTickets(today)}
+initHome();
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&document.getElementById('modal').classList.contains('show'))requestWake()});
+</script></body></html>
